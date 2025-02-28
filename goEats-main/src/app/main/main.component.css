@@ -1,0 +1,125 @@
+.principal{
+ 
+  width: 80%;
+  margin: 0 auto;
+   
+}
+
+/***lista de comidas ***************************/
+
+select {
+     
+  padding: 8px;       
+  border: 2px solid #3498db;   
+  border-radius: 5px;  
+  background: #f8f9fa;  
+  font-size: 16px;     
+  color: #333;        
+  cursor: pointer;     
+} 
+
+select:focus {
+  outline: none;      
+  border-color: #2c3e50;   
+}
+
+/****seleccionar archivo **************************/
+.imgselect{
+  display:flex;      
+  gap: 30px; 
+} 
+
+.imgNom{
+  display:flex;
+  align-items: flex-end;
+  
+} 
+
+.image-preview {
+width: 40px;
+object-fit: cover;
+}
+
+
+
+ /*******Formulario ***********************/
+  
+ .formulario input, textarea {
+  padding: 10px;
+  margin-left: 20px;
+  margin-top:30px;
+  border: 2px solid #3498db;  
+  border-radius: 5px;  
+  font-size: 16px;
+  color: #333;
+  outline: none;  
+  transition: border-color 0.3s ease-in-out;  
+} 
+
+input:focus, textarea:focus {
+  border-color: #2c3e50;  
+} 
+
+textarea {    
+  min-width: 45%; 
+}
+
+ /************** Contenedor de los botones */
+ .add-buttons {
+  width: 50%;
+  display: flex;
+  justify-content:flex-end;
+  gap: 10px;  
+  margin-top: 10px;
+} 
+
+/* Estilos generales para los botones */
+.add-buttons button {
+  padding: 8px 15px;
+  font-size: 14px;
+  border: 1px solid #b0b0b0;  
+  border-radius: 4px;
+  background: #d9d9d9;  
+  color: #333;
+  cursor: pointer;
+  transition: background 0.2s ease;
+} 
+
+/* Efecto al pasar el mouse */
+.add-buttons button:hover {
+  background: #bfbfbf;  
+}
+
+/****titulo Alimentos********************************/
+ .titulo{
+  padding:40px;
+} 
+
+/***datos de las comidas***************************/
+.item-image {
+  width: 50px;
+} 
+
+.menu-list{
+    display:flex;
+    justify-content:space-around; 
+} 
+
+.formateo{
+  flex: 1;
+} 
+
+.izquierda{
+    display:flex;
+    align-items: center;
+    gap:20px;
+     
+} 
+  
+/*****Disponible o No disponible*************************/
+  .not-able {
+    color: red;
+  } 
+  .able {
+    color: green;
+  } 

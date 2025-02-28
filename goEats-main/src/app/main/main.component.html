@@ -1,0 +1,61 @@
+<div class="principal">
+    <div class="formulario">
+       <select  [(ngModel)]="tipo" (ngModelChange)="notificaCambio($event)"  name="" id="">
+           <option value="Desayuno">Desayuno</option>
+           <option value="Comida">Comida</option>
+           <option value="Cena">Cena</option>
+       </select>
+
+     <div>  
+       <div class="imgselect">     
+           <input type="file" id="fileInput" accept="image/*" (change)="onFileSelected($event)" required />       
+          
+          <div class="imgNom">
+           @if (imageSrc) {                
+               <img class="image-preview" [src]="imageSrc" alt="PrevisualizaciÃ³n de imagen" />                               
+           }             
+          </div>
+       </div>   
+     </div>        
+           <div>
+           <input class="title-input" placeholder="Titulo" type="text" id="title" [(ngModel)]="newItem.name" required/>
+           <input class="number-input" placeholder="Precio" type="number" min="0" [(ngModel)]="newItem.price" required>
+           <input class="number-input" placeholder="cantidad" type="number" min="0" [(ngModel)]="newItem.quantity" required>            
+         </div>
+          <textarea  name=""  id="description"  placeholder="Descripcion"  [(ngModel)]="newItem.description" required ></textarea>
+          <div class="add-buttons">
+           <button (click)="cancel()">Cancelar</button>
+           <button (click)="addItem()">Agregar</button>
+            
+         </div>
+         <h3 class="titulo">Alimentos</h3>
+         <hr>
+       
+
+    </div>
+    <div class="informacion">
+        @for( i of menuList; track i; let j=$index  ){
+           @if (i.type == tipo) {
+               <div class="menu-list">
+                   <div class="formateo">
+                     <img class="item-image" [src]="i.image" alt="">
+                     <p>{{i.name}}</p>
+                     <p>{{i.description}}</p>
+                   </div>
+                   <div class="izquierda formateo">
+                       <p>cantidad:</p>
+                       <input class="info-input" type="number" min="0" 
+                           [(ngModel)]="i.quantity" max="99">
+                       <p>{{i.price}}</p> 
+                       @if(i.quantity>0){
+                           <p [class]="checkStatus(i)">Disponible</p>
+                       }
+                       @else{
+                           <p [class]="checkStatus(i)">No disponible</p>
+                       }
+                   </div>
+               </div>
+           }
+        }
+    </div>
+</div>
