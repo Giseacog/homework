@@ -1,0 +1,6 @@
+<div class="product-card">
+    <img [src]="productImage" alt="">
+    <h3>{{productName}}</h3>
+    <p>{{productPrice | currency }}</p>
+    <button (click)="addToCart()">Agregar al carrito </button>
+</div>
