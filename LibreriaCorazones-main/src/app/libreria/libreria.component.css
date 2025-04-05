@@ -1,0 +1,58 @@
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    background: #f2f2f2;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    margin-top: 3rem; /* O más si quieres más espacio */
+    }
+    label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold;
+    }
+    input {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.2rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        }
+        button {
+        margin-top: 1.5rem;
+        padding: 0.7rem 1.5rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1rem;
+        }
+        button:hover {
+        background-color: #0056b3;
+        }
+        .error {
+        color: red;
+        font-size: 0.85rem;
+        }
+        .book-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        }
+        .book-card {
+        background: white;
+        padding: 1rem;
+        border-radius: 8px;
+        width: 180px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        text-align: center;
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            }

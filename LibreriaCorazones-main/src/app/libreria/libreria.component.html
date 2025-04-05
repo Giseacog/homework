@@ -1,0 +1,69 @@
+<div class="form-container">
+  <h2>Solicitud de compra de un libro</h2>
+  <form _________="___________" _______________="____________________">
+    <label for="title">Título</label>
+    <input id="title" type="____________" __________________="_____________" />
+
+    <!-- Si el campo llamado title dentro del formulario fue tocado (touched) 
+      y está inválido (invalid), entonces mostrame el mensaje: El título es obligatorio -->
+
+    <!-- ¿Y en qué casos aparece ese mensaje?
+Cuando: El usuario hizo foco en el input de título y luego se fue (o intentó enviarlo).
+        El campo está vacío o con datos inválidos.
+        El validador correspondiente lo marcó como inválido! -->
+
+    @if (bookForm.get('title')?.touched && bookForm.get('title')?.invalid) {
+    <div class="error">El título es obligatorio.</div>
+    }
+
+    <label for="id_book">ID del Libro</label>
+    <input
+      id="id_book"
+      type="______________"
+      _________________="_________________"
+    />
+
+    @if (bookForm.get('id_book')?.touched && bookForm.get('id_book')?.invalid) {
+    <div class="error">El ID es obligatorio.</div>
+    }
+
+    <label for="author">Autor</label>
+    <input id="author" type="text" formControlName="author" />
+
+    @if (bookForm.get('author')?.touched && bookForm.get('author')?.invalid) {
+    <div class="error">El autor es obligatorio.</div>
+    }
+
+    <label for="image">Imagen (Archivo)</label>
+    <input
+      id="image"
+      type="_______________"
+      ________________="___________________________________"
+    />
+
+    @if (bookForm.touched && !selectedImage) {
+    <div class="error">La imagen es obligatoria.</div>
+    }
+
+    <button type="_________________________-">Guardar Libro</button>
+  </form>
+
+  <hr />
+</div>
+
+<div>
+  <h3 style="text-align: center;margin-top:3rem;">
+    Lista de libros solicitados
+  </h3>
+  <div class="book-list">
+    @for (book of books; track book.id_book){
+    <div class="book-card">
+      <img [src]="book.image" alt="{{ book.title }}" />
+      <h4>{{ book.title }}</h4>
+      <p><strong>Autor:</strong>{{ book.author }}</p>
+      <p><strong>ID:</strong>{{ book.id_book }}</p>
+    </div>
+
+    }
+  </div>
+</div>
