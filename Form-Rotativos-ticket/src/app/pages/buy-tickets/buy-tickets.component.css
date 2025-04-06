@@ -1,0 +1,51 @@
+.card {
+    background-color: #09122C;
+    color: #E17564;
+    border: 1px solid #872341;
+    border-radius: 10px;
+    }
+    .card-header {
+    background-color: #872341;
+    color: #FFFFFF;
+    border-bottom: 1px solid #BE3144;
+    }
+    ::placeholder {
+    color: #fff;
+    opacity: 0.7;
+    }
+    .form-control {
+    background-color: #09122C;
+    color: #E17564;
+    border: 1px solid #BE3144;
+    }
+    .form-control:focus {
+    background-color: #09122C;
+    color: #fff;
+    border-color: #E17564;
+    box-shadow: 0 0 5px #E17564;
+    }
+    .form-check-input {
+    background-color: #09122C;
+    border: 1px solid #BE3144;
+    }
+    .form-check-input:checked {
+        background-color: #872341;
+        border-color: #BE3144;
+        }
+        .btn-primary {
+        background-color: #BE3144;
+        border-color: #BE3144;
+        color: #FFFFFF;
+        }
+        .btn-primary:hover {
+        background-color: #872341;
+        border-color: #872341;
+        }
+        .btn-primary:disabled {
+        background-color: #E17564;
+        border-color: #E17564;
+        opacity: 0.7;
+        }
+        .text-danger {
+        color: #BE3144 !important;
+        }
